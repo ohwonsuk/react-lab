@@ -9,9 +9,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<DashboardPage />} />
-        <Route path='/posts' element={<PostListPage />} />
-        <Route path='/posts/:id' element={<PostDetailsPage />} />
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/posts" element={<PostListPage />} />
+        <Route path="/posts/:id" element={<PostDetailsPage />} />
       </Routes>
     </BrowserRouter>
   );
