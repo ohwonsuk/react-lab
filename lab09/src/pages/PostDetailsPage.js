@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { fetchPostDetail } from "../actions/postDetailsActions";
 
 const PostDetailsPage = ({ dispatch, post, loading, hasError }) => {
-    // URL이 path variable(파라미터) 값 찾기
+    // URL에서 path variable(파라미터) 값 찾기
     const { id } = useParams();
 
     useEffect(() => {

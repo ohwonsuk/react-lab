@@ -40,4 +40,5 @@ const mapStateToProps = (state) => ({
     hasErrors: state.posts.hasErrors,
 });
 
+// 리덕스와 리액트를 연결 (connect)
 export default connect(mapStateToProps)(PostPages);
