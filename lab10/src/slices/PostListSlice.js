@@ -24,3 +24,6 @@ const postListSlice = createSlice({
 
 // action creator들을 다른 모듈에서 사용할 수 있도록 export:
 export const { getPostsStart, getPostsSuccess, getPostsFailure } = postListSlice.actions;
+
+// reducer를 다른 모듈에서 사용할 수 있도록 export:
+export default postListSlice.reducer;
