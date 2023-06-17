@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { forwardRef, useRef } from "react";
 
 const FowardRef = () => {
     const inputRef = useRef(null);
@@ -13,17 +13,27 @@ const FowardRef = () => {
             <nav>
                 <button onClick={handleClick}>클릭</button>
             </nav>
-            <MyInput myRef={inputRef} />
+            {/*<MyInput myRef={inputRef} /> */}
+            <MyInput ref={inputRef} />
         </>
     );
 };
 
-const MyInput = ({ myRef }) => {
+// forwardRef 함수에게 props와 ref를 아규먼트로 전달받은 함수형 컴포넌트를 전달:
+const MyInput = forwardRef((props, ref) => {
     return (
         <>
-            <input ref={myRef} placeholder="메시지 입력..." />
+            <input ref={ref} />
         </>
     );
-};
+});
+
+// const MyInput = ({ myRef }) => {
+//     return (
+//         <>
+//             <input ref={myRef} placeholder="메시지 입력..." />
+//         </>
+//     );
+// };
 
 export default FowardRef;
