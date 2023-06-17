@@ -1,9 +1,13 @@
 import { useRef } from "react";
+import Carosel from "./components/Carousel";
 import FowardRef from "./components/ForwardRef";
 import ForwardRefEx from "./components/ForwardRefEx";
 import RefDOM from "./components/RefDOM";
 import RefVsState from "./components/RefVsState";
+import ScrollDOM from "./components/ScrollDOM";
+import ScrollDOM2 from "./components/ScrollDOM2";
 import Stopwatch from "./components/Stopwatch";
+import Video from "./components/Video";
 
 function App() {
   const ref = useRef(0);
@@ -37,6 +41,18 @@ function App() {
 
       <hr />
       <ForwardRefEx />
+
+      <hr />
+      <ScrollDOM />
+
+      <hr />
+      <ScrollDOM2 />
+
+      <hr />
+      <Carosel />
+
+      <hr />
+      <Video />
     </div>
   );
 }
